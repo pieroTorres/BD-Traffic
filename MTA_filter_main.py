@@ -30,12 +30,21 @@ def forTim(x):
         fecha=datetime.strptime(x[2], '%Y-%m-%d %H:%M:%S')
         x[2]=time.mktime(fecha.timetuple())
 
+#probar
+def hours(x):
+        fecha=datetime.strptime(x[2], '%Y-%m-%d %H:%M:%S')
+        x[2]=fecha.hour
+	x.append(fecha.weekday())
         return x
+
+
 def toHourBucket(x):
         horaEnSeg=60*60
         timeStamp=x[4]
         x[4]= timeStamp//horaEnSeg
         return x
+
+
 
 def mainFilter(rdd):
 	#limpia ingresos repetidos
@@ -52,10 +61,14 @@ def mainFilter(rdd):
 	discardHeaders=filteredT.filter(lambda x : x[0]!="latitude" )
 
 	#formatea los tiempos a segundos en UNX
-	formatTime= discardHeaders.map(lambda x: forTim(x))
+	#formatTime= discardHeaders.map(lambda x: forTim(x))
+	
+	#formatea los tiempos a horas 
+	formatTime= discardHeaders.map(lambda x: hours(x))
 
-	#Se genera una tupla para clasificacion con los valores timestamp, busID,orientation, nextStop, Route
-	classTuple= formatTime.map(lambda x: x[2],x[3],x[5],x[10],x[7])
+
+	#Se genera una tupla para clasificacion con los valores hora, diaSemana, busID,orientation, nextStop, Route
+	classTuple= formatTime.map(lambda x: (x[2],x[11],x[3],x[5],x[10],x[7]))
 
 	return classTuple
 

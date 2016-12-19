@@ -92,7 +92,7 @@ classTuple=mainFilter(rdd)
 #collectedTuple.saveAsTextFile('file:///home/cloudera/Downloads/classification_buses.csv')
 
 
-for i in classTuple.take(10):
+for i in classTuple.take(200):
 #for i in getResultsFromOneBus.take(3):
 #for i in getResultsFromOneRoute.take(100):
         print(i)

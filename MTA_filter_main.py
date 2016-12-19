@@ -55,7 +55,7 @@ def mainFilter(rdd):
 	formatTime= discardHeaders.map(lambda x: forTim(x))
 
 	#Se genera una tupla para clasificacion con los valores timestamp, busID,orientation, nextStop, Route
-	classTuple= formatTime.map(lambda x: str(x[2])+","+x[3]+","+x[5]+","+x[10]+","+x[7])
+	classTuple= formatTime.map(lambda x: x[2],x[3],x[5],x[10],x[7])
 
 	return classTuple
 

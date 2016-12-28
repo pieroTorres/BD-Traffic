@@ -51,6 +51,51 @@ def toHourBucket(x):
         x[4]= timeStamp//horaEnSeg
         return x
 
+#error, cambiar orden del for para que evalue el ùltimo ìndice
+#posibilidad de arreglo, encontrar si es el ultimo indice y verificar
+#primero ver si es <= 35 y luego si es el ultimo o penultimo
+def groupByPeriod(x):
+    x=sorted(x)
+    tiemposRecorrido=[]
+    
+    tsMinimo=x[0]
+    tsMaximo=0
+    cMediana=1
+    periodoTs=[x[0]]
+    for i in range(0,len(x)-1):
+        if (i == len(x)-2):
+            tsMaximo=x[i+1]
+            periodoTs.append(x[i+1])
+            cMediana+=1
+            if (cMediana%2==0):
+                    medianaTs=(periodoTs[(cMediana//2)-1] + periodoTs[cMediana//2])//2
+            else:
+                    medianaTs= periodoTs[cMediana//2]
+                    
+            tiemposRecorrido.append((medianaTs,tsMaximo-tsMinimo))
+        else:    
+            if (x[i+1]-x[i] <= 35):
+                tsMaximo=x[i+1]
+                periodoTs.append(x[i+1])
+                cMediana+=1
+                
+            else:
+                if (cMediana%2==0):
+                    medianaTs=(periodoTs[(cMediana//2)-1] + periodoTs[cMediana//2])//2
+                else:
+                    medianaTs= periodoTs[cMediana//2]
+                
+                tiemposRecorrido.append((medianaTs,tsMaximo-tsMinimo))
+                tsMinimo=x[i+1]
+                tsMaximo=0
+                cMediana=1
+                periodoTs=[x[i+1]]
+    return x    
+    #return tiemposRecorrido
+
+
+    
+
 
 
 def mainFilter(rdd):
@@ -83,7 +128,8 @@ def mainFilter(rdd):
     #RDD con llaves
     keyedTuple= getResultsFromOneStop.map(lambda x: ((x[3],(x[7],x[10],x[5])),x[2]))
     
-    groupedKeys=keyedTuple.groupByKey().mapValues(list)
+    groupedKeys=keyedTuple.groupByKey().mapValues(lambda x: groupByPeriod(x))
+    
     #lambda x: (max(x),min(x),max(x)-min(x))
     #RDD
 	#Se genera una tupla para clasificacion con los valores hora, diaSemana, busID,orientation, nextStop, Route

@@ -51,47 +51,58 @@ def toHourBucket(x):
         x[4]= timeStamp//horaEnSeg
         return x
 
-#error, cambiar orden del for para que evalue el ùltimo ìndice
-#posibilidad de arreglo, encontrar si es el ultimo indice y verificar
-#primero ver si es <= 35 y luego si es el ultimo o penultimo
+# La funcion ordenara los Timestamps y debera agruparlos por periodos similares,
+# los periodos son conformados por TS en orden ascendente cuya diferencia entre valores contiguos
+# no sea mayor a 40 segundos
+
+# los periodos que solo tienen 1 TS figuran con 0 (verificar si se mantiene de esta manera) 
+
 def groupByPeriod(x):
     x=sorted(x)
     tiemposRecorrido=[]
     
     tsMinimo=x[0]
-    tsMaximo=0
+    tsMaximo=x[0]
     cMediana=1
     periodoTs=[x[0]]
     for i in range(0,len(x)-1):
-        if (i == len(x)-2):
+                 
+            
+        if (x[i+1]-x[i] <= 40):
+            
             tsMaximo=x[i+1]
             periodoTs.append(x[i+1])
             cMediana+=1
-            if (cMediana%2==0):
-                    medianaTs=(periodoTs[(cMediana//2)-1] + periodoTs[cMediana//2])//2
-            else:
-                    medianaTs= periodoTs[cMediana//2]
-                    
-            tiemposRecorrido.append((medianaTs,tsMaximo-tsMinimo))
-        else:    
-            if (x[i+1]-x[i] <= 35):
-                tsMaximo=x[i+1]
-                periodoTs.append(x[i+1])
-                cMediana+=1
+            
+            if (i == len(x)-2):
                 
-            else:
                 if (cMediana%2==0):
                     medianaTs=(periodoTs[(cMediana//2)-1] + periodoTs[cMediana//2])//2
                 else:
                     medianaTs= periodoTs[cMediana//2]
-                
+                    
                 tiemposRecorrido.append((medianaTs,tsMaximo-tsMinimo))
-                tsMinimo=x[i+1]
-                tsMaximo=0
-                cMediana=1
-                periodoTs=[x[i+1]]
-    return x    
-    #return tiemposRecorrido
+            
+                
+        else:
+                
+                
+            if (cMediana%2==0):
+                medianaTs=(periodoTs[(cMediana//2)-1] + periodoTs[cMediana//2])//2
+            else:
+                medianaTs= periodoTs[cMediana//2]
+                
+            tiemposRecorrido.append((medianaTs,tsMaximo-tsMinimo))
+            tsMinimo=x[i+1]
+            tsMaximo=x[i+1]
+            cMediana=1
+            periodoTs=[x[i+1]]
+            
+            if (i == len(x)-2):
+                tiemposRecorrido.append((tsMinimo,0))
+    
+    #return x    
+    return tiemposRecorrido
 
 
     

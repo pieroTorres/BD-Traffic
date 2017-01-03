@@ -1,9 +1,4 @@
 
-# coding: utf-8
-
-# In[27]:
-
-
 from pyspark import SparkContext, SparkConf
 from pyspark.sql import SQLContext, Row
 from datetime import datetime
@@ -50,10 +45,10 @@ def toHourBucket(x):
         timeStamp=x[4]
         x[4]= timeStamp//horaEnSeg
         return x
-
+    
 # La funcion ordenara los Timestamps y debera agruparlos por periodos similares,
 # los periodos son conformados por TS en orden ascendente cuya diferencia entre valores contiguos
-# no sea mayor a 40 segundos
+# no sea mayor a 120 segundos
 
 # los periodos que solo tienen 1 TS figuran con 0 (verificar si se mantiene de esta manera) 
 
@@ -68,7 +63,7 @@ def groupByPeriod(x):
     for i in range(0,len(x)-1):
                  
             
-        if (x[i+1]-x[i] <= 40):
+        if (x[i+1]-x[i] <= 120):
             
             tsMaximo=x[i+1]
             periodoTs.append(x[i+1])
@@ -81,7 +76,7 @@ def groupByPeriod(x):
                 else:
                     medianaTs= periodoTs[cMediana//2]
                     
-                tiemposRecorrido.append((medianaTs,tsMaximo-tsMinimo))
+                tiemposRecorrido.append((medianaTs, tsMaximo-tsMinimo))
             
                 
         else:
@@ -92,20 +87,17 @@ def groupByPeriod(x):
             else:
                 medianaTs= periodoTs[cMediana//2]
                 
-            tiemposRecorrido.append((medianaTs,tsMaximo-tsMinimo))
+            tiemposRecorrido.append((medianaTs, tsMaximo-tsMinimo))
             tsMinimo=x[i+1]
             tsMaximo=x[i+1]
             cMediana=1
             periodoTs=[x[i+1]]
             
             if (i == len(x)-2):
-                tiemposRecorrido.append((tsMinimo,0))
+                tiemposRecorrido.append((tsMinimo, 0))
     
     #return x    
     return tiemposRecorrido
-
-
-    
 
 
 
@@ -130,17 +122,21 @@ def mainFilter(rdd):
     #formatTime= discardHeaders.map(lambda x: hours(x))
     
     #devolver solo de un bus
-    getResultsFromOneBus= formatTime.filter(lambda x: x[3]=='4215')
+    #getResultsFromOneBus= formatTime.filter(lambda x: x[3]=='4215')
     
-    getResultsFromOneRoute= getResultsFromOneBus.filter(lambda x: x[7]=='MTA NYCT_Q20B' )
+    #getResultsFromOneRoute= getResultsFromOneBus.filter(lambda x: x[7]=='MTA NYCT_Q20B' )
     
-    getResultsFromOneStop= getResultsFromOneRoute.filter(lambda x: x[10] =='MTA_505033') 
+    #getResultsFromOneStop= getResultsFromOneRoute.filter(lambda x: x[10] =='MTA_505010') 
     
     #RDD con llaves
-    keyedTuple= getResultsFromOneStop.map(lambda x: ((x[3],(x[7],x[10],x[5])),x[2]))
+    keyedTuple= formatTime.map(lambda x: ((x[3],(x[7],x[10],x[5])),x[2]))
     
     groupedKeys=keyedTuple.groupByKey().mapValues(lambda x: groupByPeriod(x))
     
+    
+    ##Armar tupla final utilizando indices de arrays en python
+    flattenedGroups= groupedKeys.flatMapValues(lambda x: x).map(lambda x: x[0][0])
+            
     #lambda x: (max(x),min(x),max(x)-min(x))
     #RDD
 	#Se genera una tupla para clasificacion con los valores hora, diaSemana, busID,orientation, nextStop, Route
@@ -150,7 +146,7 @@ def mainFilter(rdd):
     #Se genera una tupla para clasificacion con los valores hora, diaSemana, busID,orientation, nextStop, Route
     #classTuple= formatTime.map(lambda x: str(x[2])+","+str(x[11])+","+x[3]+","+x[5]+","+x[10]+","+x[7])
 
-    return groupedKeys
+    return flattenedGroups
 
 
 ##########################################################################
@@ -176,17 +172,11 @@ classTuple=mainFilter(rdd)
 #collectedTuple.saveAsTextFile('file:///home/cloudera/Downloads/classification_buses.csv')
 
 
-for i in classTuple.take(50):
+for i in classTuple.take(100):
 #for i in getResultsFromOneBus.take(3):
 #for i in getResultsFromOneRoute.take(100):
       print(i)
 
-
-
-
-
-
-# In[ ]:
 
 
 

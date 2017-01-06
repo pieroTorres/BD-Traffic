@@ -149,33 +149,6 @@ def mainFilter(rdd):
     return flattenedGroups
 
 
-##########################################################################
-#conf = SparkConf().setMaster("spark://King:7077").setAppName("MTAMain")
-
-#sc = SparkContext(conf = conf)
-
-rdd = sc.textFile('file:///home/cloudera/Downloads/MTA-Bus-Time_.2014-08-01.txt')
-
-classTuple=mainFilter(rdd)
-
-
-
-
-
-#Descomentar la siguiente linea para guardar en hdfs como csv
-#classTuple.saveAsTextFile('hdfs:/user/cloudera/classification_buses.csv')
-###########################################################################
-
-#collectedTuple=classTuple.collect()
-
-#classTuple.saveAsTextFile('hdfs:/user/bdata/classification_buses_test.txt')
-#collectedTuple.saveAsTextFile('file:///home/cloudera/Downloads/classification_buses.csv')
-
-
-for i in classTuple.take(100):
-#for i in getResultsFromOneBus.take(3):
-#for i in getResultsFromOneRoute.take(100):
-      print(i)
 
 
 

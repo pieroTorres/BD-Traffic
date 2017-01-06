@@ -13,3 +13,9 @@ solución:
   * [x] devolver sólo el par de timestamp mediano y el tiempo de recorrido (max-min).
   * [ ] encontrar el bucket de periodo para el timestamp mediano
   * [ ] mapear cada valor de lista con sus llaves iniciales para tener la tupla {BusID,"segmento","periodo",TiempoRecorrido}
+  * [ ] la tupla deberá ser genérica para poder moldear los resultados según petición
+
+##Generar csv/RDD para demo [ ]
+##Generar tablas de segmentos/paraderos por ruta(intentar encontrar orden de paraderos) [ ]
+##Generación de Periodos según granularización temporal (media hora, hora, dia, año) [ ]
+##Generación de Periodos según granularización física (segmento, ruta) [ ]

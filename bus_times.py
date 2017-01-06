@@ -135,7 +135,7 @@ def mainFilter(rdd):
     
     
     ##Armar tupla final utilizando indices de arrays en python
-    flattenedGroups= groupedKeys.flatMapValues(lambda x: x).map(lambda x: x[0][0])
+    flattenedGroups= groupedKeys.flatMapValues(lambda x: x).map(lambda x: (x[0][0],x[0][1][0],x[0][1][1],x[0][1][2],x[1][0],x[1][1]))
             
     #lambda x: (max(x),min(x),max(x)-min(x))
     #RDD

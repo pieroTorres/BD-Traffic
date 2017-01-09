@@ -46,6 +46,18 @@ def toHourBucket(x):
         x[4]= timeStamp//horaEnSeg
         return x
     
+    
+def toHalfHourBucket(x):
+        hora= (x[4] // (60*60))%24
+        minuto= (x[4] //60)%60
+        if (minuto < 30):
+            minuto=0.0
+        else:
+            minuto=0.5 
+        valor= hora+minuto
+        x[4]=valor
+        return x
+    
 # La funcion ordenara los Timestamps y debera agruparlos por periodos similares,
 # los periodos son conformados por TS en orden ascendente cuya diferencia entre valores contiguos
 # no sea mayor a 120 segundos

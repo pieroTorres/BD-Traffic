@@ -17,7 +17,7 @@ solución:
 ##Generar csv/RDD para demo [ ]
 Se ha generado un CSV con los valores basicos sin modificar
 solución:
-  * [ ] generar una tupla con buckets de cada media hora.
+  * [x] generar una tupla con buckets de cada media hora.
   
 ##Generar tablas de segmentos/paraderos por ruta(intentar encontrar orden de paraderos) [ ]
 ##Generación de Periodos según granularización temporal (media hora, hora, dia, año) [ ]

@@ -23,6 +23,8 @@ def toCSV(x):
 
 rdd = sc.textFile('file:///home/cloudera/Downloads/MTA-Bus-Time_.2014-08-01.txt')
 
+#rdd = sc.textFile('hdfs://King:9000/user/bdata/mta_data/MTA-Bus-Time_.2014-08-01.txt')
+
 classTuple= bus_times.mainFilter(rdd)
 halfHourBucket=classTuple.map(lambda x: bus_times.toHalfHourBucket(list(x)))
 

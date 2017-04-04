@@ -143,7 +143,7 @@ def mainFilter(rdd):
     #RDD con llaves
     keyedTuple= formatTime.map(lambda x: ((x[3],(x[7],x[10],x[5])),x[2]))
     
-    groupedKeys=keyedTuple.groupByKey().mapValues(lambda x: groupByPeriod(x))
+    groupedKeys=keyedTuple.groupByKey().mapValues(lambda x: groupByPeriod(x)).cache()
     
     
     ##Armar tupla final utilizando indices de arrays en python

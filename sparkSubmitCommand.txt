@@ -1,3 +1,13 @@
 ./bin/spark-submit --class transportFilterTest --master spark://King:7077 /home/bdata/transportFilterTest.py
 
 ./bin/spark-submit --class ClusterFilterTest --master spark://King:7077 /home/bdata/sparkPrograms/BD-Traffic/MTA_filter_main_clusterTest.py
+
+./spark-2.1.0/bin/spark-submit --class ClusterFilterTest --master spark://King:7077 --conf "spark.executor.extraJavaOptions=-XX:+UseCompressedOops" --conf "spark.driver[C.extraJavaOptions=-XX:+UseCompressedOops" /home/bdata/sparkPrograms/BD-Traffic/batch_main.py
+
+./spark-2.1.0/bin/spark-submit --class ClusterFilterTest --master spark://King:7077 --conf "spark.executor.extraJavaOptions=-XX:+UseCompressedOops -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps " --conf "spark.driver.extraJavaOptions=-XX:+UseCompressedOops -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps" /home/bdata/sparkPrograms/BD-Traffic/batch_main.py
+
+hadoop fs -getmerge /user/bdata/demo_test_august.csv demo_test_august.csv
+
+hadoop fs -rm -r /user/bdata/demo_test_august.csv 
+
+hadoop fs -du -s /user/bdata/mta_data/MTA-Bus-Time_.2014-08-* | awk '{s+=$1} END {printf "%.3fGB\n", s/1000000000}'

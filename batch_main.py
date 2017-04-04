@@ -17,13 +17,17 @@ def toCSV(x):
     return y
     
 ##########################################################################
-#conf = SparkConf().setMaster("spark://King:7077").setAppName("MTAMain")
+#conf = SparkConf().setMaster("spark://King:7077").setAppName("batch_Main")
+conf = SparkConf().setAppName("batch_Main")
 
-#sc = SparkContext(conf = conf)
 
-rdd = sc.textFile('file:///home/cloudera/Downloads/MTA-Bus-Time_.2014-08-01.txt')
+sc = SparkContext(conf = conf)
+sc.addPyFile("/home/bdata/sparkPrograms/BD-Traffic/bus_times.py")
+
+#rdd = sc.textFile('file:///home/cloudera/Downloads/MTA-Bus-Time_.2014-08-01.txt')
 
 #rdd = sc.textFile('hdfs://King:9000/user/bdata/mta_data/MTA-Bus-Time_.2014-08-01.txt')
+rdd = sc.textFile('hdfs://King:9000/user/bdata/mta_data/MTA-Bus-Time_.2014-08-*')
 
 classTuple= bus_times.mainFilter(rdd)
 halfHourBucket=classTuple.map(lambda x: bus_times.toHalfHourBucket(list(x)))
@@ -31,6 +35,10 @@ halfHourBucket=classTuple.map(lambda x: bus_times.toHalfHourBucket(list(x)))
 ##########################################################################   
 #CSV
 #classTuple.map(lambda x: toCSV(x)).saveAsTextFile('hdfs:/user/bdata/demo_test.csv')
+
+halfHourBucket.map(lambda x: toCSV(x)).saveAsTextFile('hdfs://King:9000/user/bdata/demo_test_august.csv')
+
+
 ###########################################################################
 
 
@@ -41,10 +49,14 @@ halfHourBucket=classTuple.map(lambda x: bus_times.toHalfHourBucket(list(x)))
 
 #classTuple.saveAsTextFile('hdfs:/user/bdata/classification_buses_test.txt')
 
-#for i in classTuple.take(1000):
+
+#Para correr pruebas quitar comentario
+#for i in halfHourBucket.take(20):
+
 #for i in getResultsFromOneBus.take(3):
 #for i in getResultsFromOneRoute.take(100):
-#      print(i)
+     
+	# print(i)
 
 
 # In[ ]:

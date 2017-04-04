@@ -1,0 +1,1000 @@
+   23  clear
+   24  ls
+   25  clear
+   26  cd
+   27  clear
+   28  clear
+   29  ls
+   30  clear
+   31  ls
+   32  cd noa/
+   33  ls
+   34  cd so
+   35  cd spark-gpu/
+   36  ls
+   37  cd ..
+   38  ls
+   39  clear
+   40  ls
+   41  cd Documents/
+   42  ls
+   43  clear
+   44  ls
+   45  clear
+   46  ls
+   47  cd
+   48  ls
+   49  clear
+   50  ls
+   51  su mpiuser 
+   52  clear
+   53  ls
+   54  clear
+   55  cssh clusterChess
+   56  clear
+   57  cssh clusterChess
+   58  exit
+   59  clear
+   60  ls
+   61  clear
+   62  cd /mnt/mpiuser/
+   63  ls
+   64  clear
+   65  cd
+   66  cssh clusterChess
+   67  cd scripts/
+   68  ls
+   69  vim poweroff.sh 
+   70  ./poweroff.sh 
+   71  cleear
+   72  clear
+   73  ls
+   74  cd /mnt/mpiuser/
+   75  ls
+   76  cd runsRenzo/
+   77  ls
+   78  pwd
+   79  ping Queen
+   80  ping Pawn01 
+   81  clear
+   82  ping Pawn01 
+   83  clear
+   84  cd
+   85  cd scripts/
+   86  ls
+   87  vim poweroff.sh 
+   88  ping www.google.com
+   89  vim poweroff.sh 
+   90  clear
+   91  ls
+   92  ./poweroff.sh 
+   93  clear
+   94  sudo poweroff
+   95  ping www.google.com
+   96  sudo poweroff
+   97  clear
+   98  exit
+   99  clear
+  100  exit
+  101  clear
+  102  ping www.google.com
+  103  clear
+  104  ls
+  105  clear
+  106  ping 8.8.8.8
+  107  clear
+  108  ping www.google.com
+  109  clear
+  110  exit
+  111  clear
+  112  ssh Queen
+  113  exit
+  114  clear
+  115  ls
+  116  clear
+  117  ls
+  118  clear
+  119  cd scripts/
+  120  ls
+  121  vim conectados.py 
+  122  python conectados.py 
+  123  clear
+  124  cd
+  125  cd /mnt/mpiuser/
+  126  ls
+  127  cd runsRenzo/
+  128  ls
+  129  cd ..
+  130  ls
+  131  clear
+  132  ls
+  133  cd phi-GPU-v3.0/
+  134  ls
+  135  clear
+  136  ls
+  137  clear
+  138  ls
+  139  vim bh-param.plt 
+  140  ls
+  141  clear
+  142  ls
+  143  cd 4th-CPU/
+  144  ls
+  145  cd 1nodo/
+  146  ls
+  147  cd 128k/
+  148  ls
+  149  clear
+  150  ls
+  151  vim log.4th.128kdat.1n.1st 
+  152  ls
+  153  cat log.4th.128kdat.1n.1st 
+  154  cat log.4th.128kdat.1n.2nd 
+  155  cat log.4th.128kdat.1n.3rd 
+  156  cat log.4th.128kdat.1n.4th 
+  157  cat log.4th.128kdat.1n.5th 
+  158  ls
+  159  cd ..
+  160  ls
+  161  cd ..
+  162  ls
+  163  cd 2nodo/
+  164  ls
+  165  cd 128k/
+  166  ls
+  167  clear
+  168  ls
+  169  cd ..
+  170  ls
+  171  cd ..
+  172  ls
+  173  cd 4nodo/
+  174  ls
+  175  cd 128k/
+  176  ls
+  177  cat log.4th.128kdat.4n.5th 
+  178  cat log.4th.128kdat.4n.3rd 
+  179  cat log.4th.128kdat.4n.1st 
+  180  cat log.4th.128kdat.4n.2nd 
+  181  cd ..
+  182  ls
+  183  cd 256k/
+  184  ls
+  185  cd ..
+  186  ls
+  187  cd 8k/
+  188  ls
+  189  cat log.4th.8kdat.4n.5th 
+  190  cat log.4th.8kdat.4n.2nd 
+  191  cat log.4th.8kdat.4n.3rd 
+  192  ls
+  193  cd ..
+  194  ls
+  195  cd ..
+  196  ls
+  197  cd 8nodo/
+  198  ls
+  199  cd 128k/
+  200  ls
+  201  cat log.4th.128kdat.8n.1st 
+  202  cat log.4th.128kdat.8n.2nd 
+  203  cat log.4th.128kdat.8n.3rd 
+  204  cd ..
+  205  ls
+  206  cd ..
+  207  ls
+  208  cd ..
+  209  ls
+  210  vim test128k-CPU.sh 
+  211  vim cpu-4th 
+  212  vim vim test128k-CPU.sh 
+  213  vim test128k-CPU.sh 
+  214  ls *.cfg
+  215  vim phi-GPU6.cfg 
+  216  vim data.inp 
+  217  vim phi-GPU6.cfg 
+  218  vim phi-GPU4.cfg 
+  219  vim test8k-CPU.sh 
+  220  ls
+  221  vim machines1 
+  222  vim machines2 
+  223  vim machines3
+  224  vim machines4
+  225  vim machines6
+  226  vim machines8 
+  227  clear
+  228  ls
+  229  clear
+  230  ls
+  231  vim test128k-CPU.sh 
+  232  vim phi-GPU.cpp 
+  233  clear
+  234  ls
+  235  vim machines1 
+  236  vim machines2 
+  237  vim machines3
+  238  vim machines4
+  239  vim machines8
+  240  clear
+  241  ls
+  242  ls *.cfg
+  243  vim phi-GPU4.cfg 
+  244  vim phi-GPU6.cfg 
+  245  vim phi-GPU8.cfg 
+  246  vim data.inp 
+  247  clear
+  248  htop
+  249  clear
+  250  ls
+  251  htop
+  252  clear
+  253  htop
+  254  clear
+  255  htop
+  256  ls
+  257  clear
+  258  cd
+  259  cd scripts/
+  260  ls
+  261  python conectados.py 
+  262  clear
+  263  htop
+  264  python conectados.py 
+  265  htop
+  266  cd /mnt/mpiuser/
+  267  ls
+  268  cd phi-GPU-v3.0/
+  269  ls
+  270  cd 4th-CPU/
+  271  ls
+  272  cd 1nodo/
+  273  ls
+  274  cd 128k/
+  275  ls
+  276  vim log.4th.128kdat.1n.3rd 
+  277  vim log.4th.128kdat.1n.4th 
+  278  cd ..
+  279  ls
+  280  vim 256k/
+  281  cd 256k/
+  282  ls
+  283  cd ..
+  284  ls
+  285  cd ..
+  286  ls
+  287  cd 8nodo/
+  288  ls
+  289  cd 128k/
+  290  ls
+  291  vim log.4th.128kdat.8n.1st 
+  292  ls
+  293  clear
+  294  ls
+  295  vim log.4th.128kdat.8n.5th 
+  296  vim log.4th.128kdat.8n.4th 
+  297  vim log.4th.128kdat.8n.5th 
+  298  vim log.4th.128kdat.8n.3rd 
+  299  vim log.4th.128kdat.8n.2nd 
+  300  pwd
+  301  cd ..
+  302  ls
+  303  cd ..
+  304  ls
+  305  cd 2nodo/
+  306  ls
+  307  cd 128k/
+  308  ls
+  309  vim log.4th.128kdat.2n.1st 
+  310  vim log.4th.128kdat.2n.2nd 
+  311  vim log.4th.128kdat.2n.3rd 
+  312  vim log.4th.128kdat.2n.4th 
+  313  cd ..
+  314  ls
+  315  cd ..
+  316  ls
+  317  cd 1nodo/
+  318  ls
+  319  cd 128k/
+  320  ls
+  321  vim log.4th.128kdat.1n.2nd 
+  322  vim log.4th.128kdat.1n.3rd 
+  323  cd ..
+  324  cd ../2nodo/128k/
+  325  vim log.4th.128kdat.2n.1st 
+  326  vim log.4th.128kdat.2n.2nd 
+  327  htop
+  328  clear
+  329  htop
+  330  ls
+  331  vim log.4th.128kdat.2n.1st 
+  332  cd .. 
+  333  cd ..
+  334  cd 1nodo/
+  335  ls
+  336  cd 128k/
+  337  ls
+  338  vim log.4th.128kdat.1n.1st 
+  339  vim log.4th.128kdat.1n.2nd 
+  340  vim log.4th.128kdat.1n.3rd 
+  341  ls
+  342  cd ..
+  343  cd ../2nodo/128k/
+  344  ls
+  345  vim log.4th.128kdat.2n.1st 
+  346  clear
+  347  htop
+  348  clear
+  349  ls
+  350  vim log.4th.128kdat.2n.2nd 
+  351  clear
+  352  ssh Pawn01
+  353  clear
+  354  ls
+  355  vim log.4th.128kdat.2n.1st 
+  356  ls
+  357  clear
+  358  ls
+  359  clear
+  360  ls
+  361  vim log.4th.128kdat.2n.1st 
+  362  vim log.4th.128kdat.2n.2nd 
+  363  clear
+  364  vim log.4th.128kdat.2n.2nd 
+  365  clear
+  366  vim log.4th.128kdat.2n.2nd 
+  367  clear
+  368  htop
+  369  clear
+  370  ls
+  371  vim log.4th.128kdat.2n.2nd 
+  372  clear
+  373  ls
+  374  cd ..
+  375  ls
+  376  cd ..
+  377  ls
+  378  cd ..
+  379  ls
+  380  cd ..
+  381  ls
+  382  clear
+  383  ls
+  384  clear
+  385  pwd
+  386  cd
+  387  cd scripts/
+  388  ls
+  389  vim poweroff.sh 
+  390  man shutdown 
+  391  clear
+  392  vim poweroff.sh 
+  393  ./poweroff.sh 
+  394  clear
+  395  ls
+  396  cd
+  397  clear
+  398  exit
+  399  clear
+  400  ls
+  401  cd /mnt/mpiuser/
+  402  ls
+  403  clear
+  404  ls
+  405  cd phi-GPU-v3.0/
+  406  ls
+  407  vim machines1 
+  408  vim machines2 
+  409  vim machines3
+  410  vim machines4 
+  411  vim machines8
+  412  vim test256k-CPU.sh 
+  413  clear
+  414  ls
+  415  ls *.cfg
+  416  vim phi-GPU4.cfg 
+  417  clear
+  418  pytohn ~/scripts/conectados.
+  419  pytohn ~/scripts/conectados.py 
+  420  python ~/scripts/conectados.py 
+  421  clear
+  422  ./test256k-CPU.sh 
+  423  clear
+  424  cssh clusterChess
+  425  clear
+  426  python ~/scripts/conectados.py 
+  427  clear
+  428  htop
+  429  ssh Pawn01
+  430  clear
+  431  exit
+  432  ssh Queen
+  433  exit
+  434  clear
+  435  ls
+  436  exit
+  437  clear
+  438  cd /usr/local/cuda
+  439  ls
+  440  cd ..
+  441  ls
+  442  cd cuda-8.0/
+  443  ls
+  444  clear
+  445  ls
+  446  cd samples/
+  447  ls
+  448  clear
+  449  ls
+  450  cd bin/
+  451  ls
+  452  cd ..
+  453  cd 3_Imaging/
+  454  ls
+  455  clear
+  456  ls
+  457  cd convolutionFFT2D/
+  458  ls
+  459  clear
+  460  ls
+  461  vim readme.txt 
+  462  exit
+  463  clear
+  464  nvcc --version
+  465  clear
+  466  ls
+  467  cd GPUEnabler/
+  468  ls
+  469  clear
+  470  ls
+  471  cd examples/
+  472  ls
+  473  cd src/
+  474  ls
+  475  cd main/
+  476  ls
+  477  cd scala/
+  478  ls
+  479  cd ..
+  480  ls
+  481  cd java/com/ibm/gpuenabler/
+  482  ls
+  483  vim GpuEnablerJavaExample.java 
+  484  clear
+  485  cd ..
+  486  ls
+  487  cd ..
+  488  ls
+  489  cd
+  490  cleae
+  491  clear
+  492  ls
+  493  ll
+  494  cd ParallelProgramming/
+  495  ls
+  496  cd
+  497  clear
+  498  cd ..
+  499  ls
+  500  cd mpiuser/
+  501  ls
+  502  cd
+  503  clear
+  504  ls
+  505  history | grep nvcc
+  506  history | grep *.cu
+  507  history | grep cu
+  508  clear
+  509  ls
+  510  cd noa/
+  511  la
+  512  ls
+  513  cd ..
+  514  ls
+  515  clear
+  516  ls
+  517  python --version
+  518  vim .bashrc 
+  519  ls
+  520  nvcc --version
+  521  htop
+  522  ls
+  523  python scripts/conectados.py 
+  524  ls
+  525  python --v
+  526  python --version
+  527  ls
+  528  python --version
+  529  pip
+  530  pip install virtualenv
+  531  pip2 install virtualenv
+  532  sudo pip2 install virtualenv
+  533  sudo pip2
+  534  sudo pip
+  535  pip2
+  536  pip2 install virtualenv
+  537  pip install virtualenv
+  538  pip2 install virtualenv
+  539  sudo install pip
+  540  sudo apt-get install pip
+  541  pip install --upgrade pip
+  542  pip2 install --upgrade pip2
+  543  pip2 install --upgrade pip
+  544  pip install --upgrade pip2
+  545  clear
+  546  sudo apt-get update
+  547  apt-get update
+  548  clear
+  549  ls
+  550  clear
+  551  python --version
+  552  ls
+  553  clear
+  554  /etc/init.d/network restart
+  555  ls
+  556  clear
+  557  ifconfig 
+  558  clear
+  559  cd scripts/
+  560  ls
+  561  python conectados.py 
+  562  clear
+  563  ls
+  564  cd
+  565  clear
+  566  cd scripts/
+  567  ls
+  568  exit
+  569  source env1/bin/activate
+  570  cd /opt/rh/python27/root/usr/bin/
+  571  sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH ./easy_install-2.7 pip
+  572  sudo yum install -y python27
+  573  sudo python2.7 get-pip.py
+  574  python2.7
+  575  sudo python2.7
+  576  cd
+  577  sudo python2.7 get-pip.py
+  578  ls
+  579  wget https://bootstrap.pypa.io/get-pip.py
+  580  python -V
+  581  sudo python2.7.9 get-pip.py
+  582  sudo python get-pip.py
+  583  which pip2.7
+  584  sudo su
+  585  deactivate
+  586  ls /usr/bin/
+  587  sudo su
+  588  pip
+  589  pip -V
+  590  sudo su
+  591  pip
+  592  sudo reboot now
+  593  ls
+  594  nvcc -V
+  595  pip -V
+  596  venv
+  597  pip install https://github.com/pypa/virtualenv/tarball/1.9.X
+  598  pip install -E venv request
+  599  pip install venv
+  600  sudo pip install virtualenv
+  601  cctic_v02
+  602  pip
+  603  sudo pip install virtualenv
+  604  sudo pip2 install virtualenv
+  605  virtualenv env1
+  606  sudo pip install --upgrade pip
+  607  pip install virtualenv
+  608  sudo yum update
+  609  sudo yum install -y python-devel python-setuptools python-pip
+  610  sudo pip install --upgrade pip
+  611  sudo pip install virtualenv
+  612  virtualenv env1
+  613  cd env1/
+  614  cd ..
+  615  virtualenv env1
+  616  activate env1
+  617  env1 activate
+  618  ls
+  619  cd env1/
+  620  cd ..
+  621  virtualenv -p /usr/bin/python2.7 venv
+  622  virtualenv -p /usr/bin/python27 venv
+  623  cd Downloads/
+  624  ls
+  625  cd ..
+  626  ls
+  627  virtualenv env1
+  628  env1 activate
+  629  source activate
+  630  virtualenv env1
+  631  source activate
+  632  source
+  633  cd env1
+  634  source activate
+  635  sudo pip install virtualenv
+  636  ls
+  637  cd ..
+  638  ls
+  639  cd env1/
+  640  ls
+  641  cd //
+  642  cd ..
+  643  ls
+  644  cd ..
+  645  cd //
+  646  cd
+  647  ls
+  648  cd65789
+  649  cd 789
+  650  ls
+  651  source ~/env1/bin/activate
+  652      sudo yum update
+  653      sudo yum install gcc gcc-c++
+  654      sudo yum install git vim python-devel python-pip
+  655  sudo yum install protobuf-devel leveldb-devel openblas-devel snappy-devel opencv-devel boost-devel hdf5-devel gflags-devel glog-devel lmdb-devel
+  656  sudo yum install protobuf-devel
+  657  sudo yum install leveldb-devel
+  658  sudo yum install openblas-devel
+  659  sudo yum install snappy-devel
+  660  sudo yum install opencv-devel
+  661  sudo yum install boost-devel
+  662  sudo yum install hdf5-devel
+  663  sudo yum install gflags-devel
+  664  sudo yum install glog-devel
+  665  sudo yum install lmdb-devel
+  666  wget https://storage.googleapis.com/google-code-archive-downloads
+  667  wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/google-glog/glog-0.3.3.tar.gz
+  668  tar zxvf glog-0.3.3.tar.gz
+  669  cd glog-0.3.3
+  670  ./configure
+  671  make && make install
+  672  sudo make && make install
+  673  sudo make && sudo make install
+  674  cd
+  675  cd scripts/
+  676  ls
+  677  cd ..
+  678  cd scripts/
+  679  cat poweroff.sh 
+  680  scp
+  681  hostname -I
+  682  cd ..
+  683  ls
+  684      git clone https://github.com/BVLC/caffe
+  685  ll
+  686  sudo cp cuda/include/cudnn.h /usr/local/cuda/include/
+  687  sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64/
+  688  for req in $(cat caffe/python/requirements.txt); do sudo pip install $req; done
+  689  vim .bashrc
+  690  cat .bashrc
+  691  diff .bashrc .bashrc.swp 
+  692  cat .bashrc
+  693  cat .bashrc.swp 
+  694  rm .bashrc.swp 
+  695  ls
+  696  vim .bashrc 
+  697  sudo su
+  698  vim .bashrc 
+  699  sudo su
+  700  for req in $(cat caffe/python/requirements.txt); do sudo pip install $req; done
+  701  sudo pip -V
+  702  for req in $(cat caffe/python/requirements.txt); do sudo pip2.7 install $req; done
+  703  which pip2.7
+  704  sudo su
+  705  sudo yum update
+  706  sudo yum install centos-release-scl
+  707  sudo yum install python27
+  708  scl enable python27 bash
+  709  history
+  710  source venv/bin/activate
+  711  ls
+  712  source env1/bin/activate
+  713  scl enable python27 bash
+  714  python --version
+  715  sudo su
+  716  ls
+  717  cd root
+  718  sudo su
+  719  pip --version
+  720  sudo su
+  721  exit
+  722  pip --version
+  723  sudo su
+  724  pip -V
+  725  sudo su
+  726  exit
+  727  ls
+  728  sudo su
+  729  exit
+  730  sudo su
+  731  exit
+  732  sudo su
+  733  exit
+  734  sudo su
+  735  ls
+  736  sudo su
+  737  exit
+  738  python -V
+  739  sudo su
+  740  cd caffe/
+  741  sudo make all
+  742  pip -V
+  743  python2.7 -V
+  744  python2.7
+  745  sudo su
+  746  exit
+  747  sudo su
+  748  cd scripts/
+  749  ls
+  750  ./poweroff.sh 
+  751  poweroff
+  752  sudo poweroff
+  753  ls
+  754  sudo su
+  755  ls
+  756  htop
+  757  exit
+  758  cd spark-1.6.2/
+  759  ls
+  760  cd metastore_db/
+  761  ls
+  762  cd ..
+  763  ls
+  764  cd bin/
+  765  ls
+  766  cd 
+  767  cd spark-1.6.2/
+  768  ls
+  769  cd conf/
+  770  ls
+  771  vim slaves.template 
+  772  vim spark-defaults.conf
+  773  cp spark-defaults.conf ../../spark-2.1.0/conf/
+  774  vim 
+  775  ls
+  776  vim slaves
+  777  cp slaves ../../spark-2.1.0/conf/
+  778  ls
+  779  vim spark-defaults.conf
+  780  ls
+  781  vim spark-env.sh
+  782  cp spark-env.sh ../../spark-2.1.0/conf/
+  783  ls
+  784  vim log4j.properties.template 
+  785  ls
+  786  cd
+  787  vim .bashrc 
+  788  ls
+  789  exit
+  790  ls
+  791  cd hadoop-2.6.4/
+  792  cd
+  793  ls
+  794  cd Downloads/
+  795  ls
+  796  wget http://www-us.apache.org/dist/spark/spark-2.1.0/spark-2.1.0-bin-hadoop2.6.tgz
+  797  ls
+  798  cd
+  799  ls
+  800  cd scripts/
+  801  ls
+  802  ./conectados.sh 
+  803  ls
+  804  ./cpFiles.sh 
+  805  cd..
+  806  ls
+  807  cd ..
+  808  ls
+  809  cd Downloads/
+  810  ls
+  811  pwd spark-2.1.0-bin-hadoop2.6.tgz 
+  812  cd
+  813  cd scripts/
+  814  ./cpFiles.sh 
+  815  cd ..
+  816  ls
+  817  cd Downloads/
+  818  ls
+  819  tar -xvfz spark-2.1.0-bin-hadoop2.6.tgz 
+  820  tar -xvf spark-2.1.0-bin-hadoop2.6.tgz 
+  821  ls
+  822  mov spark-2.1.0-bin-hadoop2.6 spark-2.1.0
+  823  mv spark-2.1.0-bin-hadoop2.6 spark-2.1.0
+  824  ls
+  825  mv spark-2.1.0 ../
+  826  ls
+  827  cd ..
+  828  ls
+  829  ./scripts/cpFiles.sh 
+  830  ls
+  831  cd spark
+  832  cd spark-2
+  833  cd spark-2.1.0/
+  834  ls
+  835  cd conf/
+  836  ls
+  837  cd ..
+  838  ls
+  839  cd bin/
+  840  ls
+  841  cd ..
+  842  ls
+  843  cd data/
+  844  ls
+  845  cd ..
+  846  ls
+  847  cd conf/
+  848  ls
+  849  vim spark-defaults.conf.template 
+  850  vim spark-env.sh.template 
+  851  ls
+  852  cd
+  853  ls
+  854  scp -r spark-2.1.0/ bdata@Queen:spark-2.1-0/
+  855  scp -r spark-2.1.0/ bdata@Pawn01:spark-2.1-0/ bdata@Pawn01:spark-2.1-0/
+  856  scp -r spark-2.1.0/ bdata@Pawn01:spark-2.1.0/
+  857  scp -r spark-2.1.0/ bdata@Queen:spark-2.1.0/
+  858  scp -r spark-2.1.0/ bdata@Pawn02:spark-2.1.0/
+  859  scp -r spark-2.1.0/ bdata@Pawn03:spark-2.1.0/
+  860  scp -r spark-2.1.0/ bdata@Pawn04:spark-2.1.0/
+  861  scp -r spark-2.1.0/ bdata@Pawn05:spark-2.1.0/
+  862  scp -r spark-2.1.0/ bdata@Pawn06:spark-2.1.0/
+  863  ls
+  864  ./hadoop-2.6.4/sbin/start-dfs.sh 
+  865  jps
+  866  java --version
+  867  java -version
+  868  LS
+  869  ls
+  870  cd hadoop-2.6.4cddad[B
+  871  ls
+  872  cd sbin/
+  873  ls
+  874  ./start-dfs.sh 
+  875  asasdasexitr
+  876  exit
+  877  cd hadoop-2.6.4/
+  878  ls
+  879  cd logs/
+  880  ls
+  881  vim hadoop-bdata-namenode-King.log 
+  882  vim hadoop-bdata-namenode-King.out
+  883  cd
+  884  ls
+  885  cd /usr/lib/jvm/
+  886  ls
+  887  cd java-1.8.0-openjdk-1.8.0.121-0.b13.el6_8.x86_64/
+  888  ls
+  889  cd bin/
+  890  ls
+  891  ./java
+  892  cd
+  893  cd hadoop-2.6.4/logs/
+  894  vim hadoop-bdata-namenode-King.out
+  895  cd
+  896  ls
+  897  cd hadoop-2.6.4/
+  898  cd sbin/
+  899  ls
+  900  sudo start-dfs.sh 
+  901  sudo ./start-dfs.sh 
+  902  exit
+  903  cd spark-2.1.0/
+  904  ls
+  905  ./sbin/start-all.sh 
+  906  ./sbin/stop-all.sh 
+  907  ./sbin/start-all.sh 
+  908  ./sbin/stop-all.sh 
+  909  cd
+  910  cd hadoop-2.6.4/sbin/
+  911  ./stop-all.sh 
+  912  cdexit
+  913  exit
+  914  cd hadoop-2.6.4/
+  915  ls
+  916  ./sbin/start-dfs.sh 
+  917  cd
+  918  ls
+  919  cd spark-2.1.0/
+  920  ls
+  921  ./sbin/start-all.sh 
+  922  ls
+  923  cd bin/
+  924  ./spark-submit -version
+  925  ./spark-submit -v
+  926  ./spark-submit --version
+  927  cd ..
+  928  ls
+  929  ./sbin/stop-all.sh 
+  930  git
+  931  cd
+  932  ls
+  933  vim metastore_db/
+  934  cd sparkPrograms
+  935  ls
+  936  git clone https://github.com/gusseppe/sparkmach.git
+  937  ls
+  938  cd sparkmach/
+  939  ls
+  940  cd sparkmach/
+  941  ls
+  942  cd datasets/
+  943  ls
+  944  cd ..
+  945  ls
+  946  vi sparkmach.py 
+  947  vim sparkmach.py 
+  948  cd ..
+  949  ls
+  950  cd ,,
+  951  cd ..
+  952  ls
+  953  cd sparkmach/
+  954  git pull origin master
+  955  ls
+  956  cd sparkmach/
+  957  ls
+  958  vim sparkmach.py 
+  959  cd ..
+  960  ls
+  961  cd ..
+  962  ls
+  963  cd BD-Traffic/
+  964  ls
+  965  vim batch_main.py 
+  966  cd ..
+  967  ls
+  968  cd sparkmach/
+  969  ls
+  970  cd sparkmach/
+  971  ls
+  972  cd datasets/
+  973  ls
+  974  hadoop fs -put buses_10000_filtered.csv /home/user/bdata/
+  975  hadoop fs -put buses_10000_filtered.csv /user/bdata/
+  976  cd
+  977  ls
+  978  cd sparkPrograms
+  979  ls
+  980  cd BD-Traffic/
+  981  ls
+  982  vim batch_main.py 
+  983  git sta
+  984  git status
+  985  ls
+  986  vim batch_main.py 
+  987  ls
+  988  cp batch_main.py ../sparkmach/sparkmach/
+  989  cd ..
+  990  ls
+  991  cd sparkmach/sparkmach/
+  992  ls
+  993  vim batch_main.py 
+  994  cd
+  995  ls
+  996  cd hadoop-2.6.4/
+  997  ls
+  998  cd sbin/
+  999  ./stop-dfs.sh 
+ 1000  exit
+ 1001  clear
+ 1002  scala --version
+ 1003  scalac --version
+ 1004  scalac -V
+ 1005  scalac --V
+ 1006  clear
+ 1007  scala -help
+ 1008  clear
+ 1009  ls
+ 1010  cd sparkPrograms
+ 1011  ls
+ 1012  clear
+ 1013  ls
+ 1014  cd BD-Traffic/
+ 1015  ls
+ 1016  clear
+ 1017  ls
+ 1018  vim batch_main.py 
+ 1019  clear
+ 1020  history
+ 1021  clear
+ 1022  history> history.txt

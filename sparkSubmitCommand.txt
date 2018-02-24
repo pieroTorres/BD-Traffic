@@ -11,3 +11,5 @@ hadoop fs -getmerge /user/bdata/demo_test_august.csv demo_test_august.csv
 hadoop fs -rm -r /user/bdata/demo_test_august.csv 
 
 hadoop fs -du -s /user/bdata/mta_data/MTA-Bus-Time_.2014-08-* | awk '{s+=$1} END {printf "%.3fGB\n", s/1000000000}'
+
+hadoop fs -mv /user/bdemo_test_september.csv /user/bdata/demo_test_september.csv

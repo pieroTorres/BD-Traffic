@@ -24,11 +24,11 @@ def toHalfHourBucket(x):
 
 
 
-def toCSV(x):
-    y=str(x[0])
-    for i in range(1,len(x)):
-       y= y+","+str(x[i]) 
-    return y
+#def toCSV(x):
+#    y=str(x[0])
+#    for i in range(1,len(x)):
+#       y= y+","+str(x[i]) 
+#    return y
 
 
 

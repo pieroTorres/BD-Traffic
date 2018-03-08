@@ -76,21 +76,4 @@ times_df.show()
 
 #for i in getResultsFromOneBus.take(3):
 #for i in getResultsFromOneRoute.take(100):
-     
-	# print(i)
-
-
-# In[ ]:
-
-#print(classTuple.count())
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
 

@@ -36,8 +36,13 @@ rdd = sc.textFile('hdfs://King:9000/user/bdata/mta_data/MTA-Bus-Time_.2014-10-31
 
 classTuple= bus_times.mainFilter(rdd)
 halfHourBucket=classTuple.map(lambda x: bus_times.toHalfHourBucket(list(x)))
+#halfHourBucket.collect()
 
-halfHourBucket=halfHourBucket.map(lambda x: [int(x[0]),str(x[1]),str(x[2]),int(x[3]),float(x[4]),float(x[5])]) 
+
+#halfHourBucket=halfHourBucket.map(lambda x: [int(x[0]),str(x[1]),str(x[2]),int(x[3]),float(x[4]),float(x[5])]) 
+
+
+#halfHourBucket.collect()
 ##########################################################################   
 #CSV
 #classTuple.map(lambda x: toCSV(x)).saveAsTextFile('hdfs:/user/bdata/demo_test.csv')
@@ -53,7 +58,7 @@ sparkMach_session = SparkSession.builder \
 .config("spark.driver.allowMultipleContexts", "true") \
 .getOrCreate()
 
-bucket_schema= StructType([StructField("bus_id",IntegerType(), True),StructField("route_id",StringType(), True),StructField("next_stop_id",StringType(), True),StructField("direction",IntegerType(), True),StructField("half_hour_bucket",FloatType(), True),StructField("class",FloatType(), True) ])
+bucket_schema= StructType([StructField("bus_id",StringType(), True),StructField("route_id",StringType(), True),StructField("next_stop_id",StringType(), True),StructField("direction",StringType(), True),StructField("half_hour_bucket",StringType(), True),StructField("class",StringType(), True) ])
 
 times_df= sparkMach_session.createDataFrame(halfHourBucket, bucket_schema)
 

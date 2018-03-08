@@ -7,6 +7,8 @@ from pyspark.streaming import StreamingContext
 from pyspark.sql import SQLContext, Row, SparkSession
 from pyspark.sql.types import *
 import bus_times
+import time
+
 
 
 # In[ ]:
@@ -31,15 +33,18 @@ def toHalfHourBucket(x):
 #    return y
 
 
-
+#stream main filter filters raw data so it can be predicted later
 def streamMainFilter(dstream):
-	splitted_ds= dstream.map(lambda x:x.split('\t'))	
-	discard_headers=splitted_ds.filter(lambda x : x[0]!="latitude")	
-	format_time=discard_headers.map(lambda x: bus_times.forTim(x))
-	hh_bucket=format_time.map(lambda x: toHalfHourBucket(x))
-	selected_ds= hh_bucket.map(lambda x:(x[0],x[1],x[2],x[3],x[5],x[7],x[10]))
+#this if works in order to avoid emptied partitions been saved in hdfs
+	if(dstream.getNumPartitions() > 0 ):	
+		splitted_ds= dstream.map(lambda x:x.split('\t'))	
+		discard_headers=splitted_ds.filter(lambda x : x[0]!="latitude")	
+		format_time=discard_headers.map(lambda x: bus_times.forTim(x))
+		hh_bucket=format_time.map(lambda x: toHalfHourBucket(x))
+		selected_ds= hh_bucket.map(lambda x:(x[0],x[1],x[2],x[3],x[5],x[7],x[10]))
+		selected_ds.saveAsTextFile('hdfs://King:9000/user/bdata/streamTests/streamTest'+ str(round(time.time())))
 
-	return selected_ds
+	
 
     
 ##########################################################################
@@ -60,8 +65,7 @@ dstream =ssc.textFileStream('hdfs://King:9000/user/bdata/mta_data_tests/')
 #IMPORTANT: In order to dstream read, directory must be empty then cp file into directory while spark program is submitted
 #streamMainFilter(dstream).pprint()
 
-
-streamMainFilter(dstream).saveAsTextFiles('hdfs://King:9000/user/bdata/streamTests/streamTest','txt')
+dstream.foreachRDD(lambda x: streamMainFilter(x))
 
 
 #starts streaming
